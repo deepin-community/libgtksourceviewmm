@@ -1,0 +1,24 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Source: https://download.gnome.org/sources/gtksourceviewmm/
+Upstream-Contact: Murray Cumming <murrayc@murrayc.com>
+                  Dodji Seketeli <dodji@gnome.org>
+                  Rob Page <page.rob@gmail.com>
+                  Jonathon Jongsma <jjongsma@gnome.org>
+                  Krzesimir Nowak <qdlacz@gmail.com>
+Upstream-Name: gtksourceviewmm
+
+Files: *
+Copyright: 2004-2005 Jae Jang
+           2005-2006 Rob Page
+           2006 Dodji Seketeli
+           2009, 2010, 2011 Krzesimir Nowak
+           2008 Jonathon Jongsma
+           2005-2006 The gtksourceviewmm development team
+License: LGPL-2.1+
+ This package is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+ .
+ On Debian systems, the complete text of the GNU Lesser General Public
+ License can be found in `/usr/share/common-licenses/LGPL-2.1'.

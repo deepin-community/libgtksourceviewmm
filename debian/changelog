@@ -1,0 +1,264 @@
+libgtksourceviewmm (3.18.0-deepin1) unstable; urgency=medium
+
+  * Rebuild
+
+ -- Deepin Packages Builder <packages@deepin.org>  Fri, 11 Nov 2022 17:59:22 +0800
+
+libgtksourceviewmm (3.18.0-4) unstable; urgency=medium
+
+  * Update Vcs fields for migration to https://salsa.debian.org/
+  * Bump Standards-Version to 4.3.0
+
+ -- Jeremy Bicha <jbicha@debian.org>  Fri, 28 Dec 2018 09:59:33 -0500
+
+libgtksourceviewmm (3.18.0-3) unstable; urgency=medium
+
+  * Rename debian/libgtksourceviewmm-3.0-doc.docs to debian/docs
+    to fix upgrade issue with debhelper compat 11 (Closes: #884704)
+
+ -- Jeremy Bicha <jbicha@debian.org>  Mon, 18 Dec 2017 09:30:35 -0500
+
+libgtksourceviewmm (3.18.0-2) unstable; urgency=medium
+
+  * Switch from cdbs to dh
+  * Bump debhelper compat to 11
+  * Update Vcs fields for conversion to git
+  * Add debian/gbp.conf
+  * Switch to automatic dbgsym packages
+  * Bump Standards-Version to 4.1.2
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sun, 17 Dec 2017 19:45:05 -0500
+
+libgtksourceviewmm (3.18.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update dependencies as per configure.ac:
+    - Bump libglibmm-2.4-dev to (>= 2.46.1).
+    - Bump libgtkmm-3.0-dev to (>= 3.18.0).
+    - Bump libgtksourceview-3.0-dev to (>= 3.18.0).
+    - Bump mm-common to (>= 0.9.8).
+  * Bump SHVER to 3.18.0.
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 08 Oct 2015 16:42:09 +0200
+
+libgtksourceviewmm (3.12.0-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Steve Langasek ]
+  * Rename library packages for g++5 ABI transition. (Closes: #791127)
+
+ -- Simon McVittie <smcv@debian.org>  Sun, 23 Aug 2015 16:05:49 +0100
+
+libgtksourceviewmm (3.12.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Drop obsolete DM-Upload-Allowed field.
+  * Bump Build-Depends as per configure.ac.
+  * Update debian/copyright using the final machine-readable format 1.0.
+  * Use /usr/share/doc/gtksourceviewmm-3.0 as URL in doc-base to match
+    upstream behaviour.
+  * Bump Standards-Version to 3.9.6.
+  * Bump debhelper compatibility level to 9.
+  * Convert to multiarch.
+
+ -- Michael Biebl <biebl@debian.org>  Mon, 22 Jun 2015 01:13:43 +0200
+
+libgtksourceviewmm (3.2.0-2) unstable; urgency=medium
+
+  * Use dh-autoreconf. Closes: #744612, #765229.
+  * Add build-dependency on mm-common.
+
+ -- Josselin Mouette <joss@debian.org>  Thu, 04 Dec 2014 09:56:40 +0100
+
+libgtksourceviewmm (3.2.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/watch:
+    - Track .xz tarballs.
+  * debian/control.in:
+    - Bump Build-Depends on libgtkmm-3.0-dev to (>= 3.2.0).
+    - Set pkg-gnome-maintainers@lists.alioth.debian.org as Maintainer.
+  * Correctly install documentation so it shows up in the devhelp API
+    documentation browser.
+
+ -- Michael Biebl <biebl@debian.org>  Sat, 03 Dec 2011 02:53:45 +0100
+
+libgtksourceviewmm (3.0.0-1) unstable; urgency=low
+
+  [ Emilio Pozuelo Monfort ]
+  * debian/control.in,
+    debian/rules:
+    + Remove the chrpath hack, it's been fixed in libtool.
+
+  [ Jeremy Bicha ]
+  * New upstream stable release.
+    - Ported to GTK 3
+  * Bump Standard-Version to 3.9.2
+  * Bump debhelper version to 8
+  * Watch stable releases
+  * Update dependencies for GTK 3
+
+  [ Michael Biebl ]
+  * Upload to unstable, remove check-dist.mk include.
+
+ -- Michael Biebl <biebl@debian.org>  Fri, 07 Oct 2011 07:07:28 +0200
+
+libgtksourceviewmm (2.3.1-1) experimental; urgency=low
+
+  [ Loic Minier ]
+  * Properly anchor package name regexp.
+
+  [ Deng Xiyue ]
+  * Use POSIX standard regex classes in sed trick in debian/rules.
+  * New upstream development release.
+    + Update SHVER to 2.3.1 for new API addition.
+    + Build-depends on libgtksourceview2.0-dev >= 2.4.0.
+  * Use check-dist.mk to prevent accidentally upload to sid.
+  * Update Standard-Version to 3.8.0.  No change needed.
+  * Track experimetnal branch in Vcs-*.
+  * Use viewsvn in Vcs-Browser.
+  * Target development release in debian/watch.
+
+ -- Deng Xiyue <manphiz-guest@users.alioth.debian.org>  Tue, 10 Mar 2009 12:55:23 +0800
+
+libgtksourceviewmm (2.2.0-2) unstable; urgency=low
+
+  * Upload to unstable.
+  * Add Original-Source-Command to debian/copyright.
+
+ -- Deng Xiyue <manphiz-guest@users.alioth.debian.org>  Mon, 05 May 2008 13:09:49 +0800
+
+libgtksourceviewmm (2.2.0-1) experimental; urgency=low
+
+  * New upstream release.
+    + Update shared library soversion to 2, and remove conflicts/replaces in
+      -dbg package, which was used to replace -dbg package for soversion 1.
+    + Build-Depends on libgtksourceview2.0-dev >= 2.2.0 as per upstream
+      configure.ac.
+    + Update shlibs version to 2.2.0 due to new API addition.
+    - Drop 10_gcc43_include.patch, merged upstream.
+  * Use machine-interpretable format for debian/copyright.
+  * Upstream has changed it's name to gtksourceviewmm, so update references in
+    debian/{copyright,rules,watch} to gtksourceviewmm instead, but let the
+    source package name renames the same which is unnecessary and might cause
+    more troubles.
+  * Make debian/watch track stable releases only.
+  * Target experimental as it has package name change.  Should wait release
+    team's permission for upload to unstable.  Thanks Loïc Minier.
+
+ -- Deng Xiyue <manphiz-guest@users.alioth.debian.org>  Sun, 04 May 2008 18:24:14 +0800
+
+libgtksourceviewmm (1.9.4-2) unstable; urgency=low
+
+  * Upload to unstable.
+  * Make Vcs-* URLs point to unstable branch.
+  * Update dpkg-dev Build-Depends to >= 1.14.16 for DM usage.
+  * Ack NMU.
+    + Add 10_gcc43_include.patch to fix FTBFS for gcc 4.3.
+
+ -- Deng Xiyue <manphiz-guest@users.alioth.debian.org>  Sat, 12 Apr 2008 16:26:09 +0800
+
+libgtksourceviewmm (1.9.4-1) experimental; urgency=low
+
+  [ Kilian Krause ]
+  * Use binary:Version and source:Version for binnNMU-safe uploads as
+    added in dpkg-dev 1.13.19. Add to Build-Depends accordingly.
+
+  [ Deng Xiyue ]
+  * New upstream version 2.0 for gtksourceview 2.0.
+    + Update Build-Depends accordingly.
+    + Use versioned shlibs, bumped to 1.9.4 due to new API.
+    + Rename binary package names from libgtksourceviewmm-1.0-* to
+      libgtksourceviewmm-2.0-*, and don't encode SONAME in -dbg package.
+  * Refine watch file.
+  * Update compat level to 6, hence debhelper (>= 6), cdbs (>= 0.4.51).
+  * Update standard version to 3.7.3.
+  * Use chrpath to get rid of rpath on 64bit system. B-dep on chrpath.
+  * Build static library as well.
+  * Add `DM-Upload-Allowed: yes'.
+  * Add Homepage, Vcs-Browser and Vcs-Svn fields.
+  * Use DEB_INSTALL_DOCS_ALL for dh_installdocs exclude rules.
+  * Separate documentation to -doc package, and add doc-base reference.
+
+ -- Deng Xiyue <manphiz-guest@users.alioth.debian.org>  Tue, 25 Mar 2008 18:56:12 +0800
+
+libgtksourceviewmm (0.3.1-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix GCC 4.3 FTBFS (Closes: #474836)
+  * debian/control.in:
+    - Use ${binary:Version} instead of ${Source-Version}.
+    - Bump Standards-Version to 3.7.3.
+
+ -- Chris Lamb <chris@chris-lamb.co.uk>  Sat, 12 Apr 2008 06:47:05 +0000
+
+libgtksourceviewmm (0.3.1-1) unstable; urgency=low
+
+  * updated after upstream release
+
+ -- Dodji Seketeli <dodji@seketeli.org>  Tue, 05 Jun 2007 09:20:23 +0200
+
+libgtksourceviewmm (0.3.0-2) unstable; urgency=low
+
+  [ Dodji Seketeli ]
+  * Set myself as maintainer.
+
+  [ Loic Minier ]
+  * Include uploaders.mk; build-depend on gnome-pkg-tools.
+  * Include gnome-get-source.mk.
+  * Add watch file tracking all stable branches.
+  * Wrap build-deps and deps.
+  * Use http://ftp.gnome.org/pub/gnome/sources/libgtksourceviewmm in
+    copyright.
+  * Misc cleanups.
+
+ -- Loic Minier <lool@dooz.org>  Tue, 01 May 2007 18:45:53 +0200
+
+libgtksourceviewmm (0.3.0-1) unstable; urgency=low
+
+  * New upstream release taken from Ubuntu.
+  * Put generated doxygen documentation into the development package.
+
+ -- Philipp Kern <pkern@debian.org>  Sat, 17 Mar 2007 12:25:59 +0100
+
+libgtksourceviewmm (0.3.0-0ubuntu1) feisty; urgency=low
+
+  * New upstream release:
+    - updated API documentation
+    - added gtksourceview/gtksourceviewmm.h as a shortcut header to include
+      all the gtksourviewmm headers.
+    - wrapped the GtkSourceIter class.
+    - various API cleanless fixes. Added needed const to various getters.
+    - cleaned documentation make install process
+    - fixed a typo. Renamed SourceBuffer::end_notundoable_action() into
+      SourceBuffer::end_not_undoable_action().
+  * debian/control:
+    - soname change.
+    - added doxygen Build-Depends.
+  * debian/libgtksourceviewmm-0.1-1.install ->
+    debian/libgtksourceviewmm-0.1-2.install
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Mon, 22 Jan 2007 09:25:55 +0100
+
+libgtksourceviewmm (0.2.0-1) unstable; urgency=low
+
+  * Upload under the care of the Utnubu project (Closes: #392810)
+  * Reworded the description
+  * Created seperate binary package to add debug symbols
+
+ -- Philipp Kern <pkern@debian.org>  Sat,  6 Jan 2007 13:51:51 +0100
+
+libgtksourceviewmm (0.2.0-0ubuntu1) edgy; urgency=low
+
+  * New upstream release.
+  * debian/control, debian/libgtksourceviewmm-1.0-*.install:
+    - changes for soname change.
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Mon, 18 Sep 2006 18:28:32 +0200
+
+libgtksourceviewmm (0.1.0-0ubuntu1) edgy; urgency=low
+
+  * Initial release.
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Mon, 18 Sep 2006 11:24:53 +0200

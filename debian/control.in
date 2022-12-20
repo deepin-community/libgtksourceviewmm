@@ -1,0 +1,72 @@
+Source: libgtksourceviewmm
+Section: libs
+Priority: optional
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Uploaders: @GNOME_TEAM@
+Build-Depends: debhelper (>= 11),
+               doxygen,
+               gnome-pkg-tools,
+               mm-common (>= 0.9.8),
+               libglibmm-2.4-dev (>= 2.46.1),
+               libgtkmm-3.0-dev (>= 3.18.0),
+               libgtksourceview-3.0-dev (>= 3.18.0)
+Standards-Version: 4.3.0
+Vcs-Browser: https://salsa.debian.org/gnome-team/gtksourceviewmm
+Vcs-Git: https://salsa.debian.org/gnome-team/gtksourceviewmm.git
+Homepage: http://www.gtkmm.org/
+
+Package: libgtksourceviewmm-3.0-0v5
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Conflicts: libgtksourceviewmm-3.0-0
+Replaces: libgtksourceviewmm-3.0-0
+Description: C++ binding of GtkSourceView
+ GtkSourceViewMM is a C++ binding of GtkSourceView, an extension to
+ the text widget included in GTK+ 3.x adding syntax highlighting and
+ other features typical for a source file editor.
+ .
+ GtkSourceViewMM is crafted to integrate well into applications using
+ the gtkmm framework.
+ .
+ These are the shared libraries for libgtksourceviewmm.
+
+Package: libgtksourceviewmm-3.0-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+         libgtksourceviewmm-3.0-0v5 (= ${binary:Version}),
+         libglibmm-2.4-dev (>= 2.46.1),
+         libgtkmm-3.0-dev (>= 3.18.0),
+         libgtksourceview-3.0-dev (>= 3.18.0)
+Description: C++ binding of GtkSourceView - development files
+ GtkSourceViewMM is a C++ binding of GtkSourceView, an extension to
+ the text widget included in GTK+ 3.x adding syntax highlighting and
+ other features typical for a source file editor.
+ .
+ GtkSourceViewMM is crafted to integrate well into applications using
+ the gtkmm framework.
+ .
+ These are the development files for libgtksourceviewmm, needed only
+ if you wish to write or compile software which uses it.
+
+Package: libgtksourceviewmm-3.0-doc
+Section: doc
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+         doc-base,
+         lynx | www-browser
+Description: C++ binding of GtkSourceView
+ GtkSourceViewMM is a C++ binding of GtkSourceView, an extension to
+ the text widget included in GTK+ 3.x adding syntax highlighting and
+ other features typical for a source file editor.
+ .
+ GtkSourceViewMM is crafted to integrate well into applications using
+ the gtkmm framework.
+ .
+ These are the reference documentation for libgtksourceviewmm.

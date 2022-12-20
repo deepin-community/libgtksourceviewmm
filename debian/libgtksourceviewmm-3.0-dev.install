@@ -1,0 +1,4 @@
+usr/lib/*/*.so
+usr/lib/*/pkgconfig
+usr/include
+usr/lib/*/gtksourceviewmm-3.0

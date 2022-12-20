@@ -1,0 +1,3 @@
+version=4
+https://download.gnome.org/sources/gtksourceviewmm/([\d\.]+[02468])/ \
+	gtksourceviewmm@ANY_VERSION@\.tar\.xz
